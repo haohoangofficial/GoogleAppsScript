@@ -21,7 +21,6 @@ const Folders = {
     countChildFolders: function (folderID) {
         let count = 0;
         while(DriveApp.getFolderById(folderID).getFolders().hasNext()) {
-          let child = folder.next();
           count ++;
         }
         return count;
