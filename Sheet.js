@@ -38,6 +38,16 @@ const Sheet = {
     /**
      * 
      * @param {*} table Data returned after the method getSheetName
+     * @param {*Optional} i
+     * @returns 
+     */
+    getRowData: function(table,i=null) {
+        i = i || this.countLastRow(table)
+        return table.getRange(`${this.colName(this.countLastColumn(table) - 1)}`).getValues()
+    },
+    /**
+     * 
+     * @param {*} table Data returned after the method getSheetName
      * @returns Number of last column
      */
     countLastColumn: function(table) {
