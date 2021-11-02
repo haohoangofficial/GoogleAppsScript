@@ -49,6 +49,6 @@ const Sheet = {
      * @returns return first row data
      */
     getHeader: function(table) {
-        return (table.getRange(`A1:${colName(countLastColumn(table) - 1)}1`).getValues())[0]
+        return (table.getRange(`A1:${this.colName(this.countLastColumn(table) - 1)}1`).getValues())[0]
     }
 }
