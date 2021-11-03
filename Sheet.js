@@ -60,5 +60,13 @@ const Sheet = {
      */
     getHeader: function(table) {
         return (table.getRange(`A1:${this.colName(this.countLastColumn(table) - 1)}1`).getValues())[0]
+    },
+    /**
+     * 
+     * @param {*} table Data returned after the method getSheetName
+     * @returns 
+     */
+    getData: function(table) {
+        return table.getDataRange().getValues()
     }
 }
